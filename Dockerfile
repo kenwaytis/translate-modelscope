@@ -9,9 +9,9 @@ RUN pip install \
 
 WORKDIR /home/translate
 
-#COPY ./download_model.py /home/fer/download_model.py
+COPY ./download_model.py /home/fer/download_model.py
 
-#RUN python download_model.py
+RUN python download_model.py
 
 #COPY . .
 
