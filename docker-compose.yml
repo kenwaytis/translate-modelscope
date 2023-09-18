@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   translate-modelscope:
-    image: paidax/translate-modelscope:0.0.4
+    image: paidax/translate-modelscope:0.0.5
     container_name: translate-modelscope
     deploy:
       resources:
