@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  fer-modelscope:
+    image: paidax/fer-modelscope:0.0.7
+    container_name: fer-modelscope
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ports:
+      - 9000:9000
+    command: uvicorn main:app --port 9000 --host 0.0.0.0
